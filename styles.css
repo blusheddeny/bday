@@ -41,3 +41,74 @@ p {
         opacity: 1;
     }
 }
+
+.bubble-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: float 5s linear infinite;
+}
+
+.bubble {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    animation: bubble-rise 4s linear infinite, bubble-float 5s ease-in-out infinite;
+}
+
+.bubble:nth-child(1) {
+    width: 50px;
+    height: 50px;
+    left: 10%;
+    bottom: -50px;
+}
+
+.bubble:nth-child(2) {
+    width: 30px;
+    height: 30px;
+    left: 20%;
+    bottom: -30px;
+}
+
+.bubble:nth-child(3) {
+    width: 40px;
+    height: 40px;
+    left: 40%;
+    bottom: -40px;
+}
+
+.bubble:nth-child(4) {
+    width: 25px;
+    height: 25px;
+    left: 60%;
+    bottom: -25px;
+}
+
+.bubble:nth-child(5) {
+    width: 45px;
+    height: 45px;
+    left: 80%;
+    bottom: -45px;
+}
+
+@keyframes bubble-rise {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-500px);
+        opacity: 0;
+    }
+}
+
+@keyframes bubble-float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
