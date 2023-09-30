@@ -6,7 +6,9 @@ body {
     margin: 0;
     background: linear-gradient(45deg, #0099ff, #00cc99);
 }
-
+.behind{
+    z-index:-99;
+}
 .glass-container {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 15px;
