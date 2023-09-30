@@ -8,6 +8,7 @@ body {
 }
 .behind{
     z-index:-99;
+    position: absolute;
 }
 .glass-container {
     background: rgba(255, 255, 255, 0.1);
