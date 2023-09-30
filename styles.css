@@ -42,73 +42,48 @@ p {
     }
 }
 
-.bubble-container {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    animation: float 5s linear infinite;
+.shine {
+  animation-name: glitter;
+  animation-iteration-count: infinite;
+  
 }
 
-.bubble {
-    position: absolute;
-    background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 50%;
-    animation: bubble-rise 4s linear infinite, bubble-float 5s ease-in-out infinite;
+.star-1 {
+  transform-origin: 102.14px 87.09px;
+  animation-duration: 3.5s;
 }
 
-.bubble:nth-child(1) {
-    width: 50px;
-    height: 50px;
-    left: 10%;
-    bottom: -50px;
+.star-2 {
+  transform-origin: 219.47px 205.7px;
+  animation-duration: 4s;
 }
 
-.bubble:nth-child(2) {
-    width: 30px;
-    height: 30px;
-    left: 20%;
-    bottom: -30px;
+.star-3 {
+  transform-origin: 404.11px 35.05px;
+  animation-duration: 2.5s;
 }
 
-.bubble:nth-child(3) {
-    width: 40px;
-    height: 40px;
-    left: 40%;
-    bottom: -40px;
+.star-4 {
+  transform-origin: 54.43px 393.81px;
+  animation-duration: 2.5s;
 }
 
-.bubble:nth-child(4) {
-    width: 25px;
-    height: 25px;
-    left: 60%;
-    bottom: -25px;
+.star-5 {
+  transform-origin: 374.42px 271.34px;
+  animation-duration: 3s;
 }
 
-.bubble:nth-child(5) {
-    width: 45px;
-    height: 45px;
-    left: 80%;
-    bottom: -45px;
+@keyframes glitter {
+  0% {
+    -webkit-transform: scale(0.3) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: scale(.8) rotate(360deg);
+    opacity: .7;
+  }
+  100% {
+    -webkit-transform: scale(0.3) rotate(0deg);
+    opacity: 0;
+  }
 }
-
-@keyframes bubble-rise {
-    0% {
-        transform: translateY(0);
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(-500px);
-        opacity: 0;
-    }
-}
-
-@keyframes bubble-float {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
